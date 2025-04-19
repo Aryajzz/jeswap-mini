@@ -1,41 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JeSwap Mini</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Monkey Icon">
-    <h1>JeSwap Mini</h1>
-  </header>
+function swap() {
+  const from = document.getElementById("fromToken").value;
+  const to = document.getElementById("toToken").value;
+  const amount = document.getElementById("amount").value;
 
-  <div class="swap-container">
-    <label for="fromToken">Dari Token:</label>
-    <select id="fromToken">
-      <option value="MON">MON</option>
-      <option value="USDT">USDT</option>
-    </select>
+  if (!amount || amount <= 0) {
+    alert("Masukkan jumlah yang valid.");
+    return;
+  }
 
-    <label for="toToken">Ke Token:</label>
-    <select id="toToken">
-      <option value="USDT">USDT</option>
-      <option value="MON">MON</option>
-    </select>
+  const loading = document.getElementById("loading");
+  loading.style.display = "block";
 
-    <label for="amount">Jumlah:</label>
-    <input type="number" id="amount" placeholder="Masukkan jumlah token" />
-
-    <button onclick="swap()">Swap</button>
-    <div class="loading" id="loading">Swap sedang diproses...</div>
-  </div>
-
-  <footer>
-    Dibuat oleh Je | Testnet Monad x Kuru.io
-  </footer>
-
-  <script src="swap.js"></script>
-</body>
-</html>￼Enter
+  // Simulasi proses swap (karena belum connect ke kuru.io / smart contract asli)
+  setTimeout(() => {
+    loading.style.display = "none";
+    alert(`Berhasil swap ${amount} ${from} ke ${to} di jaringan Monad Tesnet!`);
+  }, 2000);
+}
