@@ -1,0 +1,44 @@
+body {
+  background: #0f0f1a;
+  color: #f0f0ff;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: #1c1c2e;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #7f00ff55;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.swap-box select, .swap-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #2a2a3d;
+  color: #fff;
+}
+
+.swap-box button {
+  padding: 12px 24px;
+  background: #7f00ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.swap-box button:hover {
+  background: #9900ff;
+}￼Enter
