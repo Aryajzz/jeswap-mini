@@ -1,22 +1,41 @@
-async function swap() {
-  const from = document.getElementById('fromToken').value;
-  const to = document.getElementById('toToken').value;
-  const amount = document.getElementById('amount').value;
-  const status = document.getElementById('status');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JeSwap Mini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Monkey Icon">
+    <h1>JeSwap Mini</h1>
+  </header>
 
-  if (from === to) {
-    status.innerText = "Token tidak boleh sama!";
-    return;
-  }
+  <div class="swap-container">
+    <label for="fromToken">Dari Token:</label>
+    <select id="fromToken">
+      <option value="MON">MON</option>
+      <option value="USDT">USDT</option>
+    </select>
 
-  status.innerText = "Melakukan simulasi swap...";
+    <label for="toToken">Ke Token:</label>
+    <select id="toToken">
+      <option value="USDT">USDT</option>
+      <option value="MON">MON</option>
+    </select>
 
-  try {
-    // Di sini kamu bisa sambungkan ke smartcontract asli pakai ether.js
-    // Untuk sekarang simulasi dulu
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    status.innerText = `Sukses! Swap ${amount} ${from} ke ${to}`;
-  } catch (e) {
-    status.innerText = "Gagal melakukan swap.";
-  }
-}￼Enter
+    <label for="amount">Jumlah:</label>
+    <input type="number" id="amount" placeholder="Masukkan jumlah token" />
+
+    <button onclick="swap()">Swap</button>
+    <div class="loading" id="loading">Swap sedang diproses...</div>
+  </div>
+
+  <footer>
+    Dibuat oleh Je | Testnet Monad x Kuru.io
+  </footer>
+
+  <script src="swap.js"></script>
+</body>
+</html>￼Enter
