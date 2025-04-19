@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<h<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeswap Mini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Jeswap Mini</h1>
+    <img src="https://i.imgur.com/dyYzKa2.png" alt="Jeswap Monkey" class="logo" />
+    
+    <div class="swap-box">
+      <label>From:</label>
+      <select id="fromToken">
+        <option value="MON">MON</option>
+        <option value="USDT">USDT</option>
+        <option value="USDC">USDC</option>
+      </select>
+
+      <label>To:</label>
+      <select id="toToken">
+        <option value="USDT">USDT</option>
+        <option value="MON">MON</option>
+        <option value="USDC">USDC</option>
+      </select>
+
+      <input type="number" id="amount" placeholder="Amount" />
+
+      <button onclick="swap()">Swap</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="swap.js"></script>
+</body>
+</html>￼Enter
