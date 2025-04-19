@@ -1,44 +1,90 @@
 body {
-  background: #0f0f1a;
-  color: #f0f0ff;
-  font-family: sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0e0e0e, #1a001a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
   text-align: center;
-  padding: 20px;
+  margin-top: 40px;
 }
 
-.container {
-  max-width: 400px;
-  margin: auto;
-  background: #1c1c2e;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px #7f00ff55;
-}
-
-.logo {
+header img {
   width: 100px;
-  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
 }
 
-.swap-box select, .swap-box input {
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #bb86fc;
+}
+
+.swap-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
   width: 90%;
-  padding: 10px;
-  margin: 10px 0;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+  margin-top: 30px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #aaa;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
   border-radius: 10px;
   border: none;
-  background: #2a2a3d;
-  color: #fff;
+  font-size: 1rem;
 }
 
-.swap-box button {
-  padding: 12px 24px;
-  background: #7f00ff;
+button {
+  background-color: #bb86fc;
   color: white;
   border: none;
+  padding: 12px;
+  width: 100%;
   border-radius: 10px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.swap-box button:hover {
-  background: #9900ff;
+button:hover {
+  background-color: #9e6dfc;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.loading {
+  display: none;
+  color: #bb86fc;
+  margin-top: 10px;
+  text-align: center;
 }￼Enter
